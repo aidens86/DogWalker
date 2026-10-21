@@ -10,7 +10,6 @@ public class DogWalkCompany {
         Scanner s = new Scanner(dogs);
         for (int i = 0; i < 24; i++) {
             schedule[i] = s.nextInt();
-            s.close();
         }
         s.close();
     }
