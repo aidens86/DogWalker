@@ -15,15 +15,19 @@ public class Main {
 
         f = new File("walkers.txt");
         s = new Scanner(f);
+
+        int totalEarned = 0;
+
+        while (s.hasNextInt()) { 
         int company = s.nextInt();
         int maxDogs = s.nextInt();
         DogWalker walker = new DogWalker(maxDogs, companies[company]);
         int startHour = s.nextInt();
         int endHour = s.nextInt();
         int pay = walker.dogWalkShift(startHour, endHour);
-        System.out.println("Amount earned: $" + pay);
-
-        
+        totalEarned += pay;
+        }
+        System.out.println("Amount earned by all dog walkers: $" + totalEarned);
     }
 
 }
